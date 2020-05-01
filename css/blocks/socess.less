@@ -1,0 +1,75 @@
+// main: ../style.less
+
+.socess{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 42px;
+}
+
+.socess__link{
+    text-decoration: none;
+    margin-right: 10px;
+
+    width: 41px;
+    height: 41px;
+    position: relative;
+    
+    transition: all .2s linear;
+
+        & i{        
+            color: @white;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+        &--behance{
+            background-color: #1869ff;
+            font-size: 23px;
+        }
+
+
+        &--dribbble{
+            background-color: #e51a68;
+            font-size: 25px;
+        }
+
+
+        &--linkedin{
+            background-color: #007bb6;
+            font-size: 24px;
+        }
+
+
+        &--facebook{
+            background-color: #3a5898;
+            font-size: 23px;
+        }
+
+
+        &--instagram{
+            background-color: #13578a;
+            font-size: 26px;
+        }
+
+
+        &--twitter{
+            background-color: #56acef;
+            font-size: 25px;
+        }
+
+        &:hover{
+            transform: scale(1.2);
+            border-radius: 5px;
+        }
+
+    }
+
+
+
+
+
+

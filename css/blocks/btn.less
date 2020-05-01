@@ -1,0 +1,37 @@
+// main: ../style.less
+
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    padding: 1.1rem 1.8rem;
+    min-width: 170px;
+
+    border: 1px solid @gray;
+    border-radius: 30px;
+    background: none;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 1.06rem;
+    line-height: 1.1;
+    color: @black;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+
+    transition: background-color .2s linear, color .2s linear, box-shadow .2s linear;
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        background-color: @black;
+        box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.25);
+        color: @white;
+    }
+
+    + .btn{
+        margin-left: 1rem;
+    }
+}
