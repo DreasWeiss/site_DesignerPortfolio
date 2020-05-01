@@ -2,12 +2,14 @@
 
 .nav{
     display: flex;
+    align-items: center;
     height: 100%;
 }
 
 .nav__link{
-    margin-top: 12px;
-    margin-right: 30px;
+    margin-left: 2rem;
+    position: relative;
+
     font-size: 0.93rem;
     color:@black;
     text-transform: uppercase;
@@ -15,31 +17,37 @@
     letter-spacing: 0.7px;
     text-decoration: none;
 
-    &:hover,
-    &.active{
-        border-bottom: 3px solid @black;
-    }
-}
-
-.nav__btn{
-    font-size: 0.93rem;
-    color:@black;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.7px;
-    text-decoration: none;
-
-    padding: 10px 30px;
-    border: 2px solid @black;
-    border-radius: 20px;
-
-    cursor: pointer;
-
-    transition: background 0.2s linear;
-
-    &:hover{
+    &:after{
+        content: "";
+        width: 0;
+        height: 3px;
         background-color: @black;
-        color: @white;
-        text-decoration: none;
+
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: 1;
+
+        transition: width .2s linear;
+    }
+
+    &:hover:not(.nav__link--btn){
+
+        &:after{
+            width: 100%;
+        }
+    }
+    // Modificators
+    &--btn{
+        padding: 0.66rem 2rem;
+        border: 2px solid @black;
+        border-radius: 20px;
+
+        transition: background-color .2s linear, color .2s linear;
+
+        &:hover{
+            background-color: @black;
+            color: @white;
+        }
     }
 }
