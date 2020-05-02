@@ -1,0 +1,85 @@
+// main: ../style.less
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.articles__col{
+    width: 33.333%;
+    page-break-after: 0 1rem;
+}
+
+.articles__item{
+    margin-bottom: 2rem;
+}
+
+.articles__header{
+    margin-bottom: 1.35rem;
+    position: relative;
+}
+
+.articles__date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 77px;
+    height: 77px;
+
+    background-color: @black;
+
+    text-align: center;
+    font-size: 1.06rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+    color: @white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.articles__photo{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.articles__content{
+    margin-bottom: 2rem;
+}
+
+.articles__title{
+    margin-bottom: 0.6rem;
+
+    font-size: 1.2rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    a{
+        color: inherit;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.articles__cat{
+    margin-bottom: 1.5rem;
+
+    font-size: 0.8rem;
+    color: @black;
+    text-transform: uppercase;
+}
+
+.articles__text{
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+    color: @grey-light;
+    }
