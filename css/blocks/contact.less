@@ -1,0 +1,63 @@
+// main: ../style.less
+
+.contact{
+    display: flex;
+    background: url(https://via.placeholder.com/477x700/333) right center no-repeat;
+}
+
+.contact__left{
+    width: 47%;
+    padding: 2rem;
+}
+
+.modal__subtitle{
+    color: @black;
+    font-size: 1.06rem;
+    text-transform: uppercase;
+}
+
+.contact__info{
+    margin: 2rem 0 3rem;
+    padding: 0;
+    list-style: none;
+
+    color: @black;
+    font-size: .94rem;
+    font-weight: 300;
+
+    & li{
+        margin-bottom: .5rem;
+
+        display: flex;
+        align-items: center;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    & a{
+        text-decoration: none;
+        font-size: .94rem;
+        font-weight: 300;
+        color: @black;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    & fa-phone-square-alt{
+        font-size: 1.06rem;
+    }
+
+    & fa-envelope{
+        font-size: .94rem;
+    }
+
+    & i{
+        display: inline-block;
+        margin-right: .5rem;
+    }
+}
+
