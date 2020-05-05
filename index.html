@@ -36,7 +36,7 @@
                     <a class="nav__link" href="#">ABOUT ME</a>
                     <a class="nav__link" href="#">BLOG</a>
                     <a class="nav__link" href="#">CONTACT</a>
-                    <a class="nav__link  nav__link--btn" href="#">HIRE ME</a>
+                    <a class="nav__link  nav__link--btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
                 </nav>
 
             </div> <!-- /inner -->
@@ -80,8 +80,8 @@
 
                     </div> <!-- /intro__socess -->
 
-                    <a class="btn" href="">HIRE ME</a>
-                    <button class="btn" type="button">SEE MY RESUME</button>
+                    <a class="btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
+                    <button class="btn" type="button" data-modal="#modal_resume">SEE MY RESUME</button>
                 </div> <!-- /intro__content -->
 
                 <img class="intro__photo" src="/img/Intro/designer_photo.png" alt="">
@@ -104,7 +104,7 @@
             <div class="portfolio" id="portfolio">
 
                 <div class="portfolio__col" data-cat="app">
-                    <div class="work">
+                    <div class="work" data-modal="#modal_project_1">
                         <img class="work__img" src="https://via.placeholder.com/370x300/333" alt="">
                         <div class="work__content">
                             <div class="work__cat">CATEGORY: APP</div>
@@ -252,8 +252,8 @@
                             ad saepe nemo at facilis ullam minima libero labore id dolor, quis eius natus, eveniet
                             placeat, quisquam deleniti!</p>
                     </div>
-                    <a class="btn" href="">HIRE ME</a>
-                    <button class="btn" type="button">SEE MY RESUME</button>
+                    <a class="btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
+                    <button class="btn" type="button" data-modal="#modal_resume">SEE MY RESUME</button>
                 </div><!-- /about__content -->
 
             </div><!-- /about__inner -->
@@ -426,7 +426,7 @@
                     <a href="#" class="footer__nav-link">About ME</a>
                     <a href="#" class="footer__nav-link">Blog</a>
                     <a href="#" class="footer__nav-link">Contact</a>
-                    <a href="#" class="footer__nav-link  footer__nav-link--btn">HIRE ME</a>
+                    <a href="#" class="footer__nav-link  footer__nav-link--btn" data-modal="#modal_hire_me">HIRE ME</a>
                 </nav>
 
             </div> <!-- /footer__inner -->
@@ -437,10 +437,10 @@
 
     <!-- Modals -->
     <!-- Modal-WORK -->
-    <div class="modal" style="display: none;">
+    <div class="modal" id="modal_project_1">
         <div class="modal__dialog">
 
-            <button class="modal__close" type="button">
+            <button class="modal__close" type="button" data-close>
                 <i class="fas fa-times-circle"></i>
             </button>
 
@@ -490,11 +490,11 @@
     </div> <!-- /modal -->
 
 
-    <!-- Modal-PORTFOLIO -->
-    <div class="modal" style="display: none;">
+    <!-- Modal-RESUME -->
+    <div class="modal" id="modal_resume">
         <div class="modal__dialog">
 
-            <button class="modal__close" type="button">
+            <button class="modal__close" type="button" data-close>
                 <i class="fas fa-times-circle"></i>
             </button>
 
@@ -651,7 +651,7 @@
                 </div> <!-- /timeline-->
 
                 <div class="text-center">
-                    <a href="#" class="btn">HIRE ME</a>
+                    <a href="#" class="btn" data-modal="#modal_hire_me">HIRE ME</a>
                 </div>
 
             </div> <!-- /modal__content -->
@@ -661,10 +661,10 @@
 
 
     <!-- Modal-CONTACT -->
-    <div class="modal" style="display: none;">
+    <div class="modal" id="modal_hire_me">
         <div class="modal__dialog  modal__dialog--sm">
 
-            <button class="modal__close" type="button">
+            <button class="modal__close" type="button" data-close>
                 <i class="fas fa-times-circle"></i>
             </button>
 
