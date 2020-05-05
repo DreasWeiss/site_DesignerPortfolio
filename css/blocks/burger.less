@@ -1,0 +1,47 @@
+// main: ../style.less
+
+.burger{
+    display: none;
+
+    background: none;
+    padding: .66rem .2rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    
+
+    @media @m-mobile{
+        display: block;
+    }
+}
+
+.burger__item {
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+
+    background-color: @black;
+
+    position: relative;
+
+    &:after,
+    &:before{
+        content: "";
+        width: 100%;
+        height: 100%;
+
+        background-color: @black;
+
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+
+    &:before{
+        top: -8px;
+    }
+
+    &:after{
+        bottom: -8px;
+    }
+}

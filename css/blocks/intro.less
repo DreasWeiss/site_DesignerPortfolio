@@ -6,23 +6,55 @@
 .intro__inner{
     display: flex;
 
-    padding-top: 100px;
-    padding-bottom: 120px;
+    padding-top: 6.6rem;
+    padding-bottom: 8rem;
 
     background: url("/img/Intro/symbols.png") right bottom no-repeat;
     border-bottom: 1px solid fade(@gray, 30%);
 
     position: relative;
+
+    @media @m-tablet{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        background-size: 400px auto;
+    }
+
+    @media @m-mobile{
+        background-size: 300px auto;
+    }
+
+    @media @m-mobile-sm{
+        background: none;
+    }
 }
 
 .intro__content{
     width: 50%;
+
+    @media @m-mobile{
+        width: 75%;
+    }
+
+    @media @m-mobile-sm{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
 }
 
 .intro__subtitle{
     font-weight: 200;
     font-size: 2.13rem;
     color: @black;
+
+    @media @m-tablet{
+        font-size: 1.5rem;
+    }
 }
 
 .intro__title{
@@ -31,6 +63,10 @@
     font-weight: 700;
     font-size: 3rem;
     color: @black;
+
+    @media @m-tablet{
+        font-size: 2.4rem;
+    }
 }
 
 .intro__text{
@@ -38,6 +74,10 @@
 
     font-size: 1.2rem;
     color: @gray;
+
+    @media @m-tablet{
+        font-size: 1rem;
+    }
 }
 
 
@@ -47,4 +87,33 @@
     bottom: -1px;
     right: 74px;
     z-index: 1;
+
+    @media @m-tablet{
+        width: 280px;
+        right: 50px;
+    }
+
+    @media @m-mobile{
+        width: 200px;
+        right: 10px;
+    }
+
+    @media @m-mobile-sm{
+        display: none;
+    }
+}
+
+.intro__btn{
+    @media @m-mobile-sm{
+        display: flex;
+        flex-direction: column;
+        & .btn{
+            width: 18rem;
+            margin-bottom: 1rem;
+
+            &:last-child{
+                margin-left: 0;
+            }
+        }
+    }
 }
